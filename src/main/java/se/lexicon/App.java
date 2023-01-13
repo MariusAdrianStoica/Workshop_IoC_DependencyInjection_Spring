@@ -7,10 +7,7 @@ import se.lexicon.models.Student;
 import se.lexicon.service.StudentManagement;
 import se.lexicon.util.UserInputService;
 
-/**
- * Hello world!
- *
- */
+
 public class App 
 {
     public static void main( String[] args ) throws DataNotFoundException {
