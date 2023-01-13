@@ -45,6 +45,9 @@ public class App
         studentManagement.remove(1);
         System.out.println("\nAll students: \n" +studentManagement.findAll()+"\n");
 
+        studentManagement.edit(new Student(2,"Test"));
+        System.out.println("\nAll students: \n" +studentManagement.findAll()+"\n");
+
 
 
 

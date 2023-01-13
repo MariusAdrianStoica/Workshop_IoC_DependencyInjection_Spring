@@ -73,7 +73,8 @@ public class StudentManagementConsoleImpl implements StudentManagement{
     public Student edit(Student student) throws DataNotFoundException{
         if (student.equals(null)) throw new IllegalArgumentException("Student was null");
         Student updatedStudent = studentDao.find(student.getId());
-        studentDao.save(updatedStudent);
+
+        studentDao.save(student);
         return updatedStudent;
     }
 }

@@ -27,7 +27,7 @@ public class StudentDaoListImpl implements StudentDao{
         } else students.forEach(element -> {
             if (element.getId() == student.getId()) {
                 element.setName(student.getName());
-                System.out.println("Student with ID: "+ student.getId() + "was updated");
+                System.out.println("Student with ID: "+ student.getId() + " was updated");
             }
         });
         return null;
