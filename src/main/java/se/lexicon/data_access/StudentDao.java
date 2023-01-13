@@ -9,7 +9,7 @@ public interface StudentDao {
 
     Student save(Student student);
 
-    Student find(int id)throws DataNotFoundException;
+    Student find(int id);
 
     List<Student> findAll();
 

@@ -29,6 +29,7 @@ public class Student {
     }
 
     public void setName(String name) {
+        if (name == null) throw new IllegalArgumentException("Name was null");
         this.name = name;
     }
 
