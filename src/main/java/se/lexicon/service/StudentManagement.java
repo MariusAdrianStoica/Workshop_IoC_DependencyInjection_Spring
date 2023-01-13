@@ -9,7 +9,7 @@ public interface StudentManagement {
 
     Student create()throws IllegalArgumentException;
     Student save(Student student);
-    Student find(int id);
+    Student find(int id)throws RuntimeException;
     Student remove(int id) throws DataNotFoundException;
     List<Student> findAll();
     Student edit(Student student)throws DataNotFoundException;

@@ -34,7 +34,7 @@ public class StudentDaoListImpl implements StudentDao{
     }
 
     @Override
-    public Student find(int id) throws NoSuchElementException {
+    public Student find(int id) throws RuntimeException {
         if (id < 1) throw new IllegalArgumentException("StudentId must be positive number");
 
         //System.out.println("students size is: "+students.size());
@@ -48,8 +48,7 @@ public class StudentDaoListImpl implements StudentDao{
                                 .filter(element-> element.getId() ==id)
                                 .findFirst();
 
-        if (!foundStudent.isPresent())
-            System.out.println(("Student with ID: \"" + id + "\" was not found!\""));
+        if (!foundStudent.isPresent()) throw new RuntimeException("Student with ID: \"" + id + "\" was not found!\"");
         else System.out.println(foundStudent.get() + " was found");
         return foundStudent.get();
     }

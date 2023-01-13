@@ -9,7 +9,7 @@ public interface StudentDao {
 
     Student save(Student student);
 
-    Student find(int id);
+    Student find(int id)throws RuntimeException;
 
     List<Student> findAll();
 

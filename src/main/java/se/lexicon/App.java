@@ -37,16 +37,22 @@ public class App
 
         System.out.println("\nAll students: \n" +studentManagement.findAll()+"\n");
 
-        studentManagement.find(2);
+        try{
+            studentManagement.find(2);
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+            e.printStackTrace();
+        }
 
         studentManagement.remove(1);
 
         System.out.println("\nAll students: \n" +studentManagement.findAll()+"\n");
 
         try {
-            studentManagement.edit(new Student(2, "Test"));
+            studentManagement.edit(new Student(4, "Test"));
         }catch (Exception e){
             System.out.println(e.getMessage());
+            e.printStackTrace();
         }
         System.out.println("\nAll students: \n" +studentManagement.findAll()+"\n");
 

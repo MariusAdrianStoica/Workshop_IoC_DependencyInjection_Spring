@@ -47,7 +47,7 @@ public class StudentManagementConsoleImpl implements StudentManagement{
     }
 
     @Override
-    public Student find(int id){
+    public Student find(int id)throws RuntimeException{
         System.out.println("Please enter student's ID to find(must be a positive number): ");
         id = scannerService.getInt();
         //System.out.println("ID is: "+id);
