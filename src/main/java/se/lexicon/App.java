@@ -43,9 +43,14 @@ public class App
         studentManagement.find(2);
 
         studentManagement.remove(1);
+
         System.out.println("\nAll students: \n" +studentManagement.findAll()+"\n");
 
-        studentManagement.edit(new Student(2,"Test"));
+        try {
+            studentManagement.edit(new Student(2, "Test"));
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
         System.out.println("\nAll students: \n" +studentManagement.findAll()+"\n");
 
 
